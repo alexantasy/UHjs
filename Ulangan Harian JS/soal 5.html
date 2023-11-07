@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 5</title>
+
+    <style>
+        button{
+            background-color: #6e2950b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soal Nomor 3<hr></h1>
+    <h3>Buatlah program utuk menghitung luas segituga dengan rumus 0.5 x alas x tinggi. Lalu angka alas dan tinggi menyesuaikan inputan pengguna yang dibutuhkan.</h3>
+
+    <label for="alas">Masukkan panjang alas segitiga:</label>
+    <input type="number" id="alas" placeholder="Panjang alas">
+    <br>
+    
+    <label for="tinggi">Masukkan tinggi segitiga:</label>
+    <input type="number" id="tinggi" placeholder="Tinggi segitiga">
+    <br>
+    
+    <button onclick="hitungLuas()">Hitung Luas</button>
+    
+    <p>Luas Segitiga: <span id="hasilLuas"></span></p>
+    
+    <script>
+    function hitungLuas() {
+        var alas = parseFloat(document.getElementById("alas").value);
+        var tinggi = parseFloat(document.getElementById("tinggi").value);
+    
+        var luasSegitiga = 0.5 * alas * tinggi;
+        document.getElementById("hasilLuas").textContent = luasSegitiga;
+    }
+    </script>
+    
+    <form action="index.html">
+        <button type="submit">back</button>
+    </form>
+</body>
+</html>

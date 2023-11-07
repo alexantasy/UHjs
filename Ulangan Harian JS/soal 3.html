@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 3</title>
+
+    <style>
+        button{
+            background-color: #6e2950b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soal Nomor 6<hr></h1>
+    <h3>Buatlah program untuk melakukan pengecekan apakah suatu bilangan termasuk bilangan ganjil atau genap.<br></h3>
+
+    <div id="number-check">
+        <h1>Pengecekan Bilangan Ganjil dan Genap</h1>
+        <input type="number" id="number" placeholder="Masukkan bilangan">
+        <button onclick="checkNumber()">Lakukan Pengecekan Bilangan</button>
+        <p class="message" id="number-message"></p>
+    </div>
+
+    <script>
+        function checkNumber() {
+            var inputNumber = document.getElementById("number").value;
+            var numberMessage = document.getElementById("number-message");
+
+            if (isNaN(inputNumber)) {
+                numberMessage.textContent = "Masukkan bukan angka.";
+            } else if (inputNumber % 2 === 0) {
+                numberMessage.textContent = "Bilangan Ini genap.";
+            } else {
+                numberMessage.textContent = "Bilangan Ini ganjil.";
+            }
+        }
+    </script>
+    <form action="index.html">
+        <button type="submit">back</button>
+    </form>
+</body>
+</html>

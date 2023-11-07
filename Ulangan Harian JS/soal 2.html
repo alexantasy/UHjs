@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2</title>
+
+    <style>
+        button{
+            background-color: #6e2950b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soal Nomor 4<hr></h1>
+    <h3>Buatlah program logika untuk menampilkan form login. Cetaklah kalimat <b>"Selamat Anda Berhasil Login" Jika Usernamenya "Stematel" dan passwordnya "2023" apabila tidak sesuai maka mencetak kalimat " Maaf Anda Gagal Login."</b></h3>
+
+
+    <div id="login-form">
+        <h1>Form Login</h1>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="checkLogin()">Login</button>
+        <p class="message" id="login-message"></p>
+    </div>
+    
+    <script>
+    function checkLogin() {
+        var expectedUsername = "Stematel";
+        var expectedPassword = "2023";
+        var inputUsername = document.getElementById("username").value;
+        var inputPassword = document.getElementById("password").value;
+        var loginMessage = document.getElementById("login-message");
+    
+        if (inputUsername === expectedUsername && inputPassword === expectedPassword) {
+            loginMessage.textContent = "Selamat Anda Berhasil Login";
+        } else {
+            loginMessage.textContent = "Maaf Anda Gagal Login";
+        }
+    }
+    </script>
+
+    <form action="index.html">
+        <button type="submit">back</button>
+    </form>
+
+    <script>
+
+    </script>
+</body>
+</html>

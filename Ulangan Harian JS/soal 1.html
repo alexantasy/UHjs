@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 1</title>
+
+    <style>
+        button{
+            background-color: #6e2950b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soal Nomor 8 <hr></h1>
+    <h3>Butlah program untuk melakukan pengecekan apakah suatu bilangan termasuk bilangan positive atau negatif.</h3>
+
+    <input type="number" id="inputNumber" placeholder="Masukkan bilangan">
+    <button onclick="checkNumber()">Lakukan Pengecekan</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+        
+            var inputElement = document.getElementById("inputNumber");
+            var number = parseFloat(inputElement.value);
+
+            if (isNaN(number)) {
+                document.getElementById("result").innerHTML = "Masukanlah angka";
+            } else if (number > 0) {
+                document.getElementById("result").innerHTML = "Bilangan Ini Positif.";
+            } else if (number < 0) {
+                document.getElementById("result").innerHTML = "Bilangan  ini negatif.";
+            } else {
+                document.getElementById("result").innerHTML = "Yang Anda Masukan Adalah nol (0).";
+            }
+        }
+    </script>
+
+    <form action="index.html">
+        <button type="submit">back</button>
+    </form>
+</body>
+</html>
